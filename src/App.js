@@ -1,25 +1,37 @@
 import logo from './logo.svg';
+import GHlogo from './GHlogo.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header />
+      <div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hi, my name is Noah Sawyer.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>
+          This is a simple React app deployed on GitHub Pages.
+        </p>
+        <p> 
+          For now, this is just a test, but please, feel free to check back soon!
+        </p>
+      </div>
     </div>
   );
+}
+
+const Header = () => {
+  return (
+    <div>
+      <div class="Header">
+        <p class="HeaderLeft">Noah Sawyer</p>
+        <p class="HeaderRight"><a href="https://github.com/noahsawyer921/website/tree/main"><img class="HeaderLink" src={GHlogo} /></a></p>
+      </div>
+      <div class="HeaderSpacer"></div>
+    </div>
+  )
 }
 
 export default App;

@@ -1,3 +1,12 @@
+* {
+  font-family: FreeMono, monospace;
+  color: white;
+}
+
+html {
+  background-color: #2B303A;
+}
+
 .App {
   text-align: center;
 }
@@ -9,7 +18,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
@@ -35,4 +44,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Header {
+  height: 20px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  text-align: right;
+  background-color: #58A4B0;
+  color: white;
+  position: fixed;
+  z-index: 10;
+  clear:none;
+}
+.HeaderSpacer {
+  height:30px;
+}
+.HeaderLeft {
+  float: left;
+  margin: 0px;
+}
+.HeaderRight {
+  float: right;
+  margin: 0px;
+}
+.HeaderLink {
+  height: 24px;
+  width: 24px;
 }
