@@ -58,7 +58,7 @@ html {
   clear:none;
 }
 .HeaderSpacer {
-  height:30px;
+  height:50px;
 }
 .HeaderLeft {
   float: left;
@@ -67,6 +67,7 @@ html {
 .HeaderRight {
   float: right;
   margin: 0px;
+  margin-right: 5px;
 }
 .HeaderLink {
   height: 24px;
@@ -75,11 +76,12 @@ html {
 
 .AppBody {
   display: grid;
-  grid-template-columns: 1fr, 2fr, 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .CentralColumn {
   grid-column: 2;
+  text-align: left;
 }
 .LeftColumn {
   grid-column: 1;
@@ -87,4 +89,45 @@ html {
 
 .RightColumn {
   grid-column: 3;
+}
+
+.SectionHeader {
+  margin-top: 0px;
+  font-weight: normal;
+}
+
+.Section {
+  background-color: #58A4B0;
+  /*background-color: #2B303A;*/
+  /*background-color: #282c34;*/
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 70px;
+}
+
+.PostHeader {
+  font-weight: normal;
+  margin: 10px;
+}
+
+.Post {
+  /*background-color: #58A4B0;*/
+  background-color: #2B303A;
+  /*background-color: #282c34;*/
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.PostBody {
+  /*background-color: #58A4B0;*/
+  /*background-color: #2B303A;*/
+  background-color: #282c34;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  
+}
+
+.PostBody p {
+  margin: 10px;
 }

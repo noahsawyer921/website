@@ -1,0 +1,51 @@
+{
+	"jobs": [
+		{
+			"Company": "Court of Appeals for the Federal Circuit",
+			"Title": "Application Developer",
+			"DateRange": "Current",
+			"Responsibilities" : ["Starting Soon!"]
+		},
+		{
+			"Company": "Viget",
+			"Title": "Application Developer",
+			"DateRange": "Jun 2022 - Aug 2022",
+			"Responsibilities": [
+				"Worked alongside a team of developers, designers, product managers, and project managers to produce and deploy a finished web application.",
+				"Designed and built the backend for a web application using Ruby on Rails, Redis, and Postgresql.",
+				"Designed and built a relational database structure for multiple web applications using Postgresql.",
+				"Built a live-updating chat application using Websockets, Actioncable, and Turbo Rails.",
+				"Learned as a mentee to a team of professional application developers.",
+				"Contributed to the development of web applications purchased by client businesses."
+
+			]
+		},
+		{
+			"Company": "No Greater Sacrifice",
+			"Title": "Technology Intern",
+			"DateRange": "May 2021 - Aug 2021",
+			"Responsibilities": [
+				"Maintained a database of all organization contacts to facilitate proper communication and funding between donors and recipients.",
+				"Gathered and updated data for more than 300 recipients for proper reporting and analysis.",
+				"Researched and performed statistical analysis on the age distribution of injured veterans and their children to predict future funding requirements for the organization.",
+				"Calculated the minimum and maximum liability of individual recipients based on their preferred institutions and potential financial assistance.",
+				"Assisted staff with selecting and learning new software to help the organization increase efficiency and allow for greater intake."
+
+			]
+		}
+	],
+	"education": [
+		{
+			"Institution": "George Mason University",
+			"Degree": "Bachelor of Science in Computer Science",
+			"DateRange": "Aug 2019 - May 2023",
+			"GPA": "3.95"
+		},
+		{
+			"Institution": "Colonial Heights High School",
+			"Degree": "High School Diploma with Honors",
+			"DateRange": "Sep 2015 - Jun 2019",
+			"GPA": "4.00"
+		}
+	]
+}

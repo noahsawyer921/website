@@ -1,31 +1,16 @@
 import logo from './logo.svg';
-import GHlogo from './GHlogo.png';
+import GHLogo from './GHlogo.png';
+import LILogo from './LinkedInLogo.png';
+import data from './data.json';
+
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <div class="AppBody">
-        {/*Left column */}
-        <div class="LeftColumn"></div>
-        {/*Middle column */}
-        <div class="CentralColumn">
-          <img src={logo} className="App-logo" alt="logo" />
-
-          <p>
-            Hi, my name is Noah Sawyer.
-          </p>
-          <p>
-            This is a simple React app deployed on GitHub Pages.
-          </p>
-          <p> 
-            For now, this is just a test, but please, feel free to check back soon!
-          </p>
-        </div>
-        {/*Right column */}
-        <div class="RightColumn"> </div>
-      </div>
+      <AppBody />
     </div>
   );
 }
@@ -33,13 +18,117 @@ function App() {
 const Header = () => {
   return (
     <div>
-      <div class="Header">
-        <p class="HeaderLeft">Noah Sawyer</p>
-        <p class="HeaderRight"><a href="https://github.com/noahsawyer921/website/tree/main"><img class="HeaderLink" src={GHlogo} /></a></p>
+      <div className="Header">
+        <p className="HeaderLeft">Noah Sawyer</p>
+        <p className="HeaderRight"><a href="https://github.com/noahsawyer921/website/tree/main"><img className="HeaderLink" src={GHLogo} /></a></p>
+        <p className="HeaderRight"><a href="https://www.linkedin.com/in/noah-sawyer-01a7971bb/"><img className="HeaderLink" src={LILogo} /></a></p>
       </div>
-      <div class="HeaderSpacer"></div>
+      <div className="HeaderSpacer"></div>
     </div>
   )
 }
+
+const AppBody = () => {
+  return(
+    <div className="AppBody">
+      {/*Left column */}
+      <div className="LeftColumn"></div>
+      {/*Middle column */}
+      <div className="CentralColumn">
+        <Summary />
+        <EducationHistory education={data.education} />
+        <WorkHistory jobs={data.jobs}/>
+      </div>
+      {/*Right column */}
+      <div className="RightColumn"></div>
+    </div>
+  );
+}
+const Summary = () => {
+  return (
+    <div>
+      <h1 className="SectionHeader"> Noah Sawyer </h1>
+      <p> Application Developer </p>
+      <p> ---------@email.com </p>
+      <p> XXX-XXX-XXXX </p>
+    </div>
+  );
+}
+const WorkHistory = (props) => {
+  return(
+    <div className="Section">
+      <h2 className="SectionHeader"> Work Experience </h2>
+      {
+        props.jobs.map((job) => {
+          return(<Job job={job} key={job}/>)
+        })
+      }
+    </div>
+  );
+}
+
+const Job = (props) => {
+ return(
+    <div className="Post">
+      <h3 className="PostHeader"> {props.job.Company} </h3>
+      <div className="PostBody">
+        <p> <i>{props.job.Title}</i> </p>
+        <p> {props.job.DateRange}</p>
+        <ul>
+          {
+            props.job.Responsibilities.map((r) => {
+              return (
+                <li key={r}> {r} </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+
+const EducationHistory = (props) => {
+  return(
+    <div className="Section">
+      <h2 className="SectionHeader"> Education </h2>
+      {
+        props.education.map((ed) => {
+          return(<Education education={ed} />);
+        })
+      }
+    </div>
+  );
+}
+
+const Education = (props) => {
+  return(
+    <div className="Post">
+      <h3 className="PostHeader"> {props.education.Institution} </h3>
+      <div className="PostBody">
+        <p> {props.education.Degree}, {props.education.GPA}</p>
+        <p> {props.education.DateRange} </p>
+      </div>
+    </div>
+  )
+}
+
+const Skills = () => {
+  return(
+    <div>
+
+    </div>
+  );
+}
+const ContactMe = () => {
+  return(
+    <div>
+
+    </div>
+  );
+}
+
+
 
 export default App;
