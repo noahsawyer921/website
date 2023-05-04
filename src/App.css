@@ -72,3 +72,19 @@ html {
   height: 24px;
   width: 24px;
 }
+
+.AppBody {
+  display: grid;
+  grid-template-columns: 1fr, 2fr, 1fr;
+}
+
+.CentralColumn {
+  grid-column: 2;
+}
+.LeftColumn {
+  grid-column: 1;
+}
+
+.RightColumn {
+  grid-column: 3;
+}

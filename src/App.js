@@ -6,17 +6,25 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hi, my name is Noah Sawyer.
-        </p>
-        <p>
-          This is a simple React app deployed on GitHub Pages.
-        </p>
-        <p> 
-          For now, this is just a test, but please, feel free to check back soon!
-        </p>
+      <div class="AppBody">
+        {/*Left column */}
+        <div class="LeftColumn"></div>
+        {/*Middle column */}
+        <div class="CentralColumn">
+          <img src={logo} className="App-logo" alt="logo" />
+
+          <p>
+            Hi, my name is Noah Sawyer.
+          </p>
+          <p>
+            This is a simple React app deployed on GitHub Pages.
+          </p>
+          <p> 
+            For now, this is just a test, but please, feel free to check back soon!
+          </p>
+        </div>
+        {/*Right column */}
+        <div class="RightColumn"> </div>
       </div>
     </div>
   );
